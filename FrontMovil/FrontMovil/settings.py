@@ -53,7 +53,7 @@ ROOT_URLCONF = 'FrontMovil.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'/home/agenciamovil/FrontMovil/FrontMovil/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
