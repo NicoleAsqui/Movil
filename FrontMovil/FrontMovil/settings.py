@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-3pkotmq@60cbd5aj%uqd%p)5wie+zvxr$!v=x!2&shc!%4aarx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['agenciamovil.pythonanywhere.com']
-
+ALLOWED_HOSTS = ['agenciamovil.pythonanywhere.com', 'agencialaboralproyecto.pythonanywhere.com','localhost','pythonanywhere.com','127.0.0.1']
 
 # Application definition
 
@@ -75,11 +74,13 @@ WSGI_APPLICATION = 'FrontMovil.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'AgenciaLaboralPr$agenciadb',
+        'USER':'AgenciaLaboralPr',
+        'PASSWORD':'admin123',
+        'HOST':'AgenciaLaboralProyecto.mysql.pythonanywhere-services.com'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -130,3 +131,8 @@ MEDIA_ROOT = '/home/agenciamovil/FrontMovil/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/agenciamovil/FrontMovil/static'
 STATIC_URL = '/static/'
+
+JWT_AUTH = {
+    # Authorization:Token xxx
+    'JWT_AUTH_HEADER_PREFIX': 'Token',
+}
